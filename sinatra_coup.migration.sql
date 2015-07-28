@@ -1,10 +1,10 @@
-CREATE DATABASE sinatra_coupons;
+CREATE DATABASE scoupons;
 
 \c sinatra_coupons
 
-CREATE TABLE sinatra_coupons (id SERIAL PRIMARY KEY, title varchar(255), description text, product int, discount money, exp_date date);
+CREATE TABLE coupons (id SERIAL PRIMARY KEY, title varchar(255), description text, product int, discount money, exp_date date);
 
-INSERT INTO sinatra_coupons (title, description, product, discount, exp_date)
+INSERT INTO coupons (title, description, product, discount, exp_date)
 VALUES
 ('BOGO', 'Buy one get one free!', 123456, 10.00, '2015, 12, 31');
 

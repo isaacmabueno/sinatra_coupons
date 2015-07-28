@@ -1,0 +1,11 @@
+<h3>All of our delicious coupons</h3>
+
+<ol>
+  <% @coupons.each do |coupon| %>
+
+  <li>
+    This <%= coupon.title %> acronym stands for <%= coupon.description %> It is product number: <%= coupon.product %>. Your discount is $<%= coupon.discount %>0 and it expires on <%= coupon.exp_date %>.
+  </li>
+
+  <% end %>
+</ol>
