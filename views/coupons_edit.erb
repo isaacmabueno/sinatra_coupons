@@ -1,0 +1,11 @@
+<h1> Edit coupon ID #1</h1>
+<form action="/students/edit" method="post">
+  <input type="hidden" name="id" value="<%= @coupon.id %>">
+  <input type="text" name="title" value="@coupon.title">
+  <input type="text" name="description" value="@coupon.description">
+  <input type="text" name="product" value="@coupon.product">
+  <input type="text" name="discount" value="@coupon.discount">
+  <input type="text" name="exp_date" value="@coupon.exp_date">
+  <input type="submit" value="Edit Coupon">
+
+</form>

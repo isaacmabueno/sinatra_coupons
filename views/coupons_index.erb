@@ -1,11 +1,52 @@
 <h3>All of our delicious coupons</h3>
+<li><a href='/students/create'>Create Coupons</a></li>
+<table>
+  <thead>
+      <th>
+        ID
+      </th>
+      <th>
+        title
+      </th>
+      <th>
+        description
+      </th>
+      <th>
+        product
+      </th>
+      <th>
+        discount
+      </th>
+      <th>
+        exp_date
+      </th>
+  </thead>
+  <tbody>
+      <% @coupons.each do |coupon| %>
+      <tr>
+        <td>
+          <%= coupon.id %>
+        </td>
+        <td>
+          <%= coupon.title %>
+        </td>
+        <td>
+          <%= coupon.description %>
+        </td>
+        <td>
+          <%= coupon.product %>
+        </td>
+        <td>
+          <%= coupon.discount %>
+        </td>
+        <td>
+          <%= coupon.exp_date %>
+        </td>
+        <td>
+          <a href='/coupons/edit/ <%= coupon.id %>'>Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-<ol>
-  <% @coupons.each do |coupon| %>
-
-  <li>
-    This <%= coupon.title %> acronym stands for <%= coupon.description %> It is product number: <%= coupon.product %>. Your discount is $<%= coupon.discount %>0 and it expires on <%= coupon.exp_date %>.
-  </li>
-
-  <% end %>
-</ol>
+<% end %>
